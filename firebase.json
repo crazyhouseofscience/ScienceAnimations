@@ -1,4 +1,3 @@
-
 {
   "hosting": {
     "public": "public",
@@ -13,3 +12,4 @@
       { "source": "**", "destination": "/index.html" }
     ]
   }
+}

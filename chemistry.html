@@ -2,93 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Chemistry Apps</title>
+  <title>Warm‑Ups</title>
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="chem-theme">
 
 <main class="content">
-  <h1>Chemistry Apps</h1>
+  <h1>Chemistry Resources</h1>
 
-  <!-- DAILY ACTIVITIES -->
-  <div class="section">
-    <button class="section-toggle" onclick="toggleSection('daily')">Daily Activities ▼</button>
-    <section id="daily" class="launchpad small-tiles section-content">
+<h1>Chemistry</h1>
 
-      <a class="tile chem-tile" href="warmup.html">
-        <h3>📘 Warm‑Up</h3>
-        <p>Daily starter</p>
-      </a>
+<!-- Warm-Up -->
+<button class="section-toggle" onclick="toggleSection('chem-warmup', this)">
+  Warm-Up
+</button>
+<section id="chem-warmup" class="section-content">
+  <ul class="resource-links">
+    <li><a href="https://script.google.com/macros/s/AKfycbxYziSWUjZFSZcvkxZn-ZbVfydDbUYXf336kPC2ddEmv35DI9ofgx7wiFZRWobRAh4u/exec"target="_blank">Reaction rates do now</a></li>
+    <li><a href="warmups/warmup2.html" target="_blank">Warm-Up 2</a></li>
+  </ul>
+</section>
 
-      <a class="tile chem-tile" href="exit-ticket.html">
-        <h3>📝 Exit Ticket</h3>
-        <p>Quick check‑in</p>
-      </a>
+<!-- Exit Ticket -->
+<button class="section-toggle" onclick="toggleSection('chem-exit', this)">
+  Exit Ticket
+</button>
+<section id="chem-exit" class="section-content">
+  <ul class="resource-links">
+    <li><a href="exit/exit1.html" target="_blank">Exit Ticket 1</a></li>
+    <li><a href="exit/exit2.html">Exit Ticket 2</a></li>
+  </ul>
+</section>
 
-    </section>
-  </div>
+<!-- Labs & Activities -->
+<button class="section-toggle" onclick="toggleSection('chem-labs', this)">
+  Labs & Activities
+</button>
+<section id="chem-labs" class="section-content">
+  <ul class="resource-links">
+    <li><a href="https://script.google.com/macros/s/AKfycbz5WY4YDTLFT1_B9ficzRHTeYoJqJbTyp0_K7xbts_32Wy6VbjC7WP-Us5vG2CCYkPWwQ/exec" target="_blank">Lewis Structures</a></li>
+    <li><a href="https://limitingreactant.vercel.app/">Limiting reactant Conservation of Mass</a></li>
+  </ul>
+</section>
+
+<!-- Tools & Utilities -->
+<button class="section-toggle" onclick="toggleSection('chem-tools', this)">
+  Tools & Utilities
+</button>
+<section id="chem-tools" class="section-content">
+  <ul class="resource-links">
+    <li><a href="tools/periodic.html" target="_blank">Periodic Table</a></li>
+    <li><a href="tools/stoich.html">Stoichiometry Calculator</a></li>
+  </ul>
+</section>
+
+<a class="back-link" href="index.html">← Back to Home</a>
 
 
-  <!-- LABS -->
-  <div class="section">
-    <button class="section-toggle" onclick="toggleSection('labs')">Labs ▼</button>
-    <section id="labs" class="launchpad small-tiles section-content">
-
-      <a class="tile chem-tile" href="YOUR_REACTION_SIMULATOR_LINK">
-        <h3>⚗️ Reaction Simulator</h3>
-        <p>Interactive modeling</p>
-      </a>
-
-      <a class="tile chem-tile" href="YOUR_VIRTUAL_LAB_LINK">
-        <h3>🧪 Virtual Lab</h3>
-        <p>Digital experiments</p>
-      </a>
-
-    </section>
-  </div>
-
-
-  <!-- TOOLS -->
-  <div class="section">
-    <button class="section-toggle" onclick="toggleSection('tools')">Tools ▼</button>
-    <section id="tools" class="launchpad small-tiles section-content">
-
-      <a class="tile chem-tile" href="YOUR_STOICH_LINK">
-        <h3>🧮stoich</h3>
-        <p>Mass, moles, ratios</p>
-      </a>
-
-      <a class="tile chem-tile" href="YOUR_PERIODIC_TABLE_LINK">
-        <h3>🔬 Periodic Table</h3>
-        <p>Element explorer</p>
-      </a>
-
-      <a class="tile chem-tile" href="YOUR_SOLUBILITY_LINK">
-        <h3>💧 Solubility Rules</h3>
-        <p>Check solubility</p>
-      </a>
-
-      <a class="tile chem-tile" href="YOUR_BALANCING_LINK">
-        <h3>⚖️ Balancing</h3>
-        <p>Practice equations</p>
-      </a>
-
-    </section>
-  </div>
-
-  <a class="back-link" href="index.html">← Back to Home</a>
-</main>
+</section>
 
 <script>
 function toggleSection(id, btn) {
   const section = document.getElementById(id);
-  section.classList.toggle("open");
-  btn.classList.toggle("open");
+  section.classList.toggle('open');
+  btn.classList.toggle('open');
 }
 </script>
-
-
+</main>
 
 </body>
 </html>

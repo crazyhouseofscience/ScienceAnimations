@@ -1,40 +1,150 @@
-/* --- COLLAPSIBLE SECTIONS --- */
-
-/* All sections start collapsed */
-.section-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-  padding: 0; /* no space when collapsed */
+/* ------------------------------
+    GLOBAL BASE STYLES
+------------------------------ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* When expanded, show content */
-.section-content.open {
-  max-height: 1000px; /* enough room for tiles */
-  padding-top: 15px;
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f1f5f9; /* Soft cool gray */
+  color: #1e293b;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
 }
 
-/* Toggle button styling */
+main.content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 40px;
+  color: #0f172a;
+  text-align: center;
+  letter-spacing: -0.025em;
+}
+
+/* Optional subtitle (keep if you use it) */
+.subtitle {
+  text-align: center;
+  color: #64748b;
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+}
+
+/* ------------------------------
+    LAUNCHPAD GRID
+------------------------------ */
+.launchpad {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* ------------------------------
+    TILE SYSTEM
+------------------------------ */
+.tile {
+  display: block;
+  text-decoration: none;
+  padding: 32px 24px;
+  border-radius: 20px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tile:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.tile h3 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  color: #0f172a;
+}
+
+.tile p {
+  color: #64748b;
+  font-size: 1rem;
+}
+
+/* Hover color themes */
+.blue-tile:hover { border-color: #3b82f6; background: #eff6ff; }
+.green-tile:hover { border-color: #789181; background: #f2fdfb; }
+.yellow-tile:hover { border-color: #eab308; background: #fefce8; }
+
+/* ------------------------------
+    COLLAPSIBLE SECTIONS
+------------------------------ */
 .section-toggle {
   width: 100%;
   text-align: left;
-  background: #e0f2f1;
-  border: none;
-  padding: 12px 16px;
-  font-size: 1.2rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  padding: 16px 20px;
+  font-size: 1.1rem;
   font-weight: 600;
   color: #0f766e;
-  border-radius: 8px;
+  border-radius: 12px;
   cursor: pointer;
-  margin-top: 25px;
+  margin-top: 15px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Arrow icons */
-.section-toggle::after {
-  content: " ▼";
-  float: right;
+.section-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  padding: 0 20px;
 }
 
-.section-toggle.open::after {
-  content: " ▲";
+.section-content.open {
+  max-height: 1000px;
+  padding: 20px;
+}
+
+/* ------------------------------
+    RESOURCE LISTS
+------------------------------ */
+.resource-links {
+  list-style: none;
+  padding: 0;
+}
+
+.resource-links li {
+  margin-bottom: 12px;
+}
+
+.resource-links a {
+  text-decoration: none;
+  color: #334155;
+  font-weight: 500;
+  display: inline-block;
+  padding: 4px 0;
+  transition: transform 0.2s ease;
+}
+
+.resource-links a:hover {
+  color: #0f766e;
+  transform: translateX(5px);
 }

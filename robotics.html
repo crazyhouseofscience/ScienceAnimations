@@ -14,66 +14,36 @@
 <main class="content">
   <h1>Robotics Apps</h1>
 
-  <!-- DAILY ACTIVITIES -->
-  <div class="section">
-    <button class="section-toggle" onclick="toggleSection('robot-daily')">Daily Activities ▼</button>
-    <section id="robot-daily" class="launchpad small-tiles section-content">
+<!-- Warm up -->
+<button class="section-toggle" onclick="toggleSection('robot-daily', this)">
+Warm-up
+</button>
+<section id="robot-daily" class="section-content">
+  <ul class="resource-links">
 
-      <a class="tile robot-tile" href="YOUR_DAILY_LOG_LINK">
-        <h3>📓 Daily Log</h3>
-        <p>Record progress</p>
-      </a>
+  </ul>
+</section>
 
-      <a class="tile robot-tile" href="YOUR_SCOUTING_LINK">
-        <h3>🔍 Scouting</h3>
-        <p>Analyze teams</p>
-      </a>
+<!-- Mechanisms & Labs -->
+<button class="section-toggle" onclick="toggleSection('robot-labs', this)">
+  Mechanisms & Labs
+</button>
+<section id="robot-labs" class="section-content">
+  <ul class="resource-links">
+    <li><a href="https://robotman1.vercel.app/" target="_blank">Manipulator - Gears and Linkages</a></li>
+    <li><a href="https://robotics-animation.vercel.app/">Robot simulator</a></li>
+  </ul>
+</section>
 
-    </section>
-  </div>
-
-
-  <!-- LABS / MECHANISMS -->
-  <div class="section">
-    <button class="section-toggle" onclick="toggleSection('robot-labs')">Mechanisms & Labs ▼</button>
-    <section id="robot-labs" class="launchpad small-tiles section-content">
-
-      <a class="tile robot-tile" href="YOUR_INTAKE_SIM_LINK">
-        <h3>⚙️ Intake Simulator</h3>
-        <p>Roller speed model</p>
-      </a>
-
-      <a class="tile robot-tile" href="YOUR_CONVEYOR_DEBUG_LINK">
-        <h3>🔧 Conveyor Debugger</h3>
-        <p>Flow diagnostics</p>
-      </a>
-
-    </section>
-  </div>
-
-
-  <!-- TOOLS -->
-  <div class="section">
-    <button class="section-toggle" onclick="toggleSection('robot-tools')">Tools ▼</button>
-    <section id="robot-tools" class="launchpad small-tiles section-content">
-
-      <a class="tile robot-tile" href="YOUR_MOTOR_RPM_LINK">
-        <h3>📈 Motor RPM</h3>
-        <p>Telemetry viewer</p>
-      </a>
-
-      <a class="tile robot-tile" href="YOUR_SENSOR_STATUS_LINK">
-        <h3>🧭 Sensor Status</h3>
-        <p>Inputs & triggers</p>
-      </a>
-
-      <a class="tile robot-tile" href="YOUR_AUTON_BUILDER_LINK">
-        <h3>🤖 Auton Builder</h3>
-        <p>Path planning</p>
-      </a>
-
-    </section>
-  </div>
+<!-- Tools -->
+<button class="section-toggle" onclick="toggleSection('robot-tools', this)">
+  Tools
+</button>
+<section id="robot-tools" class="section-content">
+  <ul class="resource-links">
+    
+  </ul>
+</section>
 
   <a class="back-link" href="index.html">← Back to Home</a>
 </main>
@@ -81,10 +51,12 @@
 <script>
 function toggleSection(id, btn) {
   const section = document.getElementById(id);
-  section.classList.toggle("open");
-  btn.classList.toggle("open");
+  section.classList.toggle('open');
+  btn.classList.toggle('open');
 }
 </script>
+
+
 
 
 </body>
